@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="1124" y="851.42428785607206"/>
         </scene>
-        <!--Feed Page-->
+        <!--Question Feed Page-->
         <scene sceneID="haI-m1-pTF">
             <objects>
-                <viewController id="MHY-BH-Vtw" userLabel="Feed Page" customClass="FeedReceiveInput" customModule="Phone_a_Friend_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MHY-BH-Vtw" userLabel="Question Feed Page" customClass="FeedReceiveInput" customModule="Phone_a_Friend_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32C-Vj-u1T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,10 +177,10 @@
                                     <segue destination="aDb-K9-35d" kind="show" id="Ehc-h5-szR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hd-kR-h1U">
-                                <rect key="frame" x="16" y="135" width="67" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hd-kR-h1U">
+                                <rect key="frame" x="5" y="135" width="89" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="dAm-Mj-ape"/>
+                                    <constraint firstAttribute="width" constant="89" id="i85-0C-NxT"/>
                                     <constraint firstAttribute="height" constant="39" id="jim-gr-fj1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -204,26 +204,28 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgM-pZ-Uy6">
-                                <rect key="frame" x="272" y="606" width="91" height="41"/>
-                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tie-dH-04U">
+                                <rect key="frame" x="64" y="-13" width="247" height="147"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="K68-be-nJe"/>
-                                    <constraint firstAttribute="width" constant="91" id="VB7-iD-PhL"/>
+                                    <constraint firstAttribute="width" constant="247" id="Uy4-7x-jDi"/>
+                                    <constraint firstAttribute="height" constant="147" id="cgd-Bl-Qgw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Respond">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="KtV-Zt-Q2j" kind="show" id="ehO-5L-YXV"/>
-                                </connections>
-                            </button>
+                                <attributedString key="attributedText">
+                                    <fragment content="Question Feed">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YRk-z0-t56">
-                                <rect key="frame" x="16" y="182" width="343" height="197"/>
+                                <rect key="frame" x="16" y="182" width="343" height="465"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="197" id="7hg-RU-uO4"/>
+                                    <constraint firstAttribute="height" constant="465" id="UTj-pp-LRu"/>
                                     <constraint firstAttribute="width" constant="343" id="maP-qv-qca"/>
                                 </constraints>
                                 <prototypes>
@@ -245,38 +247,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Responses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMc-8U-C4J">
-                                <rect key="frame" x="16" y="383" width="107" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="107" id="ZYs-Dk-WCw"/>
-                                    <constraint firstAttribute="height" constant="48" id="nAg-aF-rpa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1lu-0C-B1r">
-                                <rect key="frame" x="16" y="427" width="343" height="171"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tie-dH-04U">
-                                <rect key="frame" x="64" y="-13" width="247" height="147"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="247" id="Uy4-7x-jDi"/>
-                                    <constraint firstAttribute="height" constant="147" id="cgd-Bl-Qgw"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Question Feed">
-                                        <attributes>
-                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="36" name="AvenirNext-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -285,25 +255,20 @@
                             <constraint firstItem="YRk-z0-t56" firstAttribute="centerX" secondItem="32C-Vj-u1T" secondAttribute="centerX" id="9Px-Iz-Cax"/>
                             <constraint firstItem="VV9-8W-DTJ" firstAttribute="centerX" secondItem="32C-Vj-u1T" secondAttribute="centerX" constant="140.5" id="HTt-Gy-l8Z"/>
                             <constraint firstItem="Tie-dH-04U" firstAttribute="centerX" secondItem="XcU-au-ABS" secondAttribute="centerX" id="K9Z-Za-qde"/>
-                            <constraint firstItem="YRk-z0-t56" firstAttribute="centerY" secondItem="32C-Vj-u1T" secondAttribute="centerY" constant="-53" id="NBx-Iy-Gji"/>
                             <constraint firstItem="VV9-8W-DTJ" firstAttribute="centerY" secondItem="32C-Vj-u1T" secondAttribute="centerY" constant="-274" id="X6N-0a-IiS"/>
                             <constraint firstItem="6Xe-dJ-RSi" firstAttribute="top" secondItem="32C-Vj-u1T" secondAttribute="top" id="atb-RP-RUe"/>
+                            <constraint firstItem="YRk-z0-t56" firstAttribute="centerY" secondItem="32C-Vj-u1T" secondAttribute="centerY" constant="81" id="b1D-1A-jyI"/>
                             <constraint firstItem="0hd-kR-h1U" firstAttribute="centerY" secondItem="32C-Vj-u1T" secondAttribute="centerY" constant="-179" id="cAN-Up-Ueb"/>
                             <constraint firstItem="5K8-Zi-ZCw" firstAttribute="centerX" secondItem="32C-Vj-u1T" secondAttribute="centerX" constant="-150" id="duG-rP-3zO"/>
                             <constraint firstItem="0hd-kR-h1U" firstAttribute="centerX" secondItem="32C-Vj-u1T" secondAttribute="centerX" constant="-138" id="jOw-SW-Utr"/>
-                            <constraint firstItem="WMc-8U-C4J" firstAttribute="centerX" secondItem="32C-Vj-u1T" secondAttribute="centerX" constant="-118" id="lC5-TN-wUe"/>
                             <constraint firstItem="H9X-rf-YBk" firstAttribute="centerX" secondItem="32C-Vj-u1T" secondAttribute="centerX" constant="-149" id="lfp-QP-NFJ"/>
-                            <constraint firstItem="rgM-pZ-Uy6" firstAttribute="centerX" secondItem="32C-Vj-u1T" secondAttribute="centerX" constant="130" id="nB0-U4-B6K"/>
                             <constraint firstItem="5K8-Zi-ZCw" firstAttribute="centerY" secondItem="32C-Vj-u1T" secondAttribute="centerY" constant="-278.5" id="uDG-Mb-kfL"/>
-                            <constraint firstItem="rgM-pZ-Uy6" firstAttribute="centerY" secondItem="32C-Vj-u1T" secondAttribute="centerY" constant="293" id="wAL-e2-UOY"/>
                             <constraint firstItem="6Xe-dJ-RSi" firstAttribute="centerX" secondItem="XcU-au-ABS" secondAttribute="centerX" id="wUf-u0-F1W"/>
-                            <constraint firstItem="WMc-8U-C4J" firstAttribute="centerY" secondItem="32C-Vj-u1T" secondAttribute="centerY" constant="73.5" id="wvv-pV-8LQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XcU-au-ABS"/>
                     </view>
                     <connections>
                         <outlet property="myQuestionTable" destination="YRk-z0-t56" id="yKe-3a-0Dx"/>
-                        <outlet property="myResponseTable" destination="1lu-0C-B1r" id="ToC-q4-IJS"/>
                         <segue destination="fkS-wi-aVI" kind="show" identifier="sgShowQuestionInfo" id="QPQ-ZD-eOt"/>
                     </connections>
                 </viewController>
@@ -781,7 +746,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="hbc-yq-XIm"/>
-        <segue reference="ehO-5L-YXV"/>
         <segue reference="iWv-jj-Yp2"/>
     </inferredMetricsTieBreakers>
 </document>
