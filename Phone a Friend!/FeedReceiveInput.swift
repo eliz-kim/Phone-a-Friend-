@@ -70,6 +70,11 @@ class FeedReceiveInput: UIViewController, UITableViewDataSource, UITableViewDele
             }
         }
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("This worked!")
+    }
         
     func getDataResponse(){
         do {
