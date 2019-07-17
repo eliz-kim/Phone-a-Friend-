@@ -10,6 +10,7 @@
 		CC2462A922DF5BD4008DD799 /* QuestionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2462A822DF5BD4008DD799 /* QuestionInput.swift */; };
 		CC2462AB22DF5C70008DD799 /* FeedReceiveInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2462AA22DF5C70008DD799 /* FeedReceiveInput.swift */; };
 		CC2462AD22DF7D31008DD799 /* ResponseInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2462AC22DF7D31008DD799 /* ResponseInput.swift */; };
+		CC2462AF22DFB005008DD799 /* Specific Question Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2462AE22DFB005008DD799 /* Specific Question Page.swift */; };
 		CCC1001022DCFC6D0043CC2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1000F22DCFC6D0043CC2F /* AppDelegate.swift */; };
 		CCC1001222DCFC6E0043CC2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1001122DCFC6E0043CC2F /* ViewController.swift */; };
 		CCC1001522DCFC6E0043CC2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC1001322DCFC6E0043CC2F /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		CC2462A822DF5BD4008DD799 /* QuestionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionInput.swift; sourceTree = "<group>"; };
 		CC2462AA22DF5C70008DD799 /* FeedReceiveInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedReceiveInput.swift; sourceTree = "<group>"; };
 		CC2462AC22DF7D31008DD799 /* ResponseInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseInput.swift; sourceTree = "<group>"; };
+		CC2462AE22DFB005008DD799 /* Specific Question Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Specific Question Page.swift"; sourceTree = "<group>"; };
 		CCC1000C22DCFC6D0043CC2F /* Phone a Friend!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phone a Friend!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC1000F22DCFC6D0043CC2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC1001122DCFC6E0043CC2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				CC2462A822DF5BD4008DD799 /* QuestionInput.swift */,
 				CC2462AA22DF5C70008DD799 /* FeedReceiveInput.swift */,
 				CC2462AC22DF7D31008DD799 /* ResponseInput.swift */,
+				CC2462AE22DFB005008DD799 /* Specific Question Page.swift */,
 			);
 			path = "Phone a Friend!";
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				CCC1001222DCFC6E0043CC2F /* ViewController.swift in Sources */,
 				CC2462AB22DF5C70008DD799 /* FeedReceiveInput.swift in Sources */,
+				CC2462AF22DFB005008DD799 /* Specific Question Page.swift in Sources */,
 				CCC1001822DCFC6E0043CC2F /* Phone_a_Friend_.xcdatamodeld in Sources */,
 				CC2462A922DF5BD4008DD799 /* QuestionInput.swift in Sources */,
 				CCC1001022DCFC6D0043CC2F /* AppDelegate.swift in Sources */,
