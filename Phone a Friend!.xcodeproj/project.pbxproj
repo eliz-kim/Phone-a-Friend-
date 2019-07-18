@@ -73,8 +73,8 @@
 				CCC1001622DCFC6E0043CC2F /* Phone_a_Friend_.xcdatamodeld */,
 				CC2462A822DF5BD4008DD799 /* QuestionInput.swift */,
 				CC2462AA22DF5C70008DD799 /* FeedReceiveInput.swift */,
-				CC2462AC22DF7D31008DD799 /* ResponseInput.swift */,
 				CC2462AE22DFB005008DD799 /* Specific Question Page.swift */,
+				CC2462AC22DF7D31008DD799 /* ResponseInput.swift */,
 			);
 			path = "Phone a Friend!";
 			sourceTree = "<group>";

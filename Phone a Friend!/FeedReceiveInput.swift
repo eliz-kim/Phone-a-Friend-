@@ -11,14 +11,10 @@ import CoreData
 class FeedReceiveInput: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var questions: [Question] = [] ////////QUESTION
-    var responses: [Response] = [] ////////RESPONSE
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == myQuestionTable {
             return self.questions.count
-        }
-        else if tableView == myResponseTable {
-            return self.responses.count
         }
         return 0
     } ////////////QUESTIONS
@@ -28,10 +24,6 @@ class FeedReceiveInput: UIViewController, UITableViewDataSource, UITableViewDele
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? UITableViewCell
             cell!.textLabel?.text = self.questions[indexPath.row].questionName
             return cell!
-        } else if tableView == myResponseTable {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as? UITableViewCell
-            cell!.textLabel?.text = self.responses[indexPath.row].responseName
-            return cell!
         }
         
         return UITableViewCell()
@@ -39,7 +31,6 @@ class FeedReceiveInput: UIViewController, UITableViewDataSource, UITableViewDele
     
 
     @IBOutlet weak var myQuestionTable: UITableView!
-    @IBOutlet weak var myResponseTable: UITableView!
     
     func getData(){
         do {
@@ -61,13 +52,6 @@ class FeedReceiveInput: UIViewController, UITableViewDataSource, UITableViewDele
                 self.questions.remove(at: indexPath.row)
                 myQuestionTable.deleteRows(at: [indexPath], with: .fade)
             }
-            else if tableView == myResponseTable {
-                let response = self.responses[indexPath.row]
-                self.context.delete(response)
-                (UIApplication.shared.delegate as! AppDelegate).saveContext()
-                self.responses.remove(at: indexPath.row)
-                myResponseTable.deleteRows(at: [indexPath], with: .fade)
-            }
         }
     }
     
@@ -75,33 +59,18 @@ class FeedReceiveInput: UIViewController, UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "sgShowQuestionInfo", sender: nil)
     }
-        
-    func getDataResponse(){
-        do {
-            responses = try context.fetch(Response.fetchRequest())
-            DispatchQueue.main.async {
-                self.myResponseTable.reloadData()
-            }
-        } catch {
-            print("Couldn't fetch Data")
-        }
-    } /////////RESPONSES
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-        getDataResponse()
         myQuestionTable.delegate = self as? UITableViewDelegate
         myQuestionTable.dataSource = self as? UITableViewDataSource
         self.myQuestionTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        myResponseTable.delegate = self as? UITableViewDelegate
-        myResponseTable.dataSource = self as? UITableViewDataSource
-        self.myResponseTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell2")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         getData()///////QUESTION
-        getDataResponse() /////RESPONSE
    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

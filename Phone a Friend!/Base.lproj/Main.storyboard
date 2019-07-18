@@ -121,6 +121,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RXj-mQ-45k"/>
                     </view>
+                    <connections>
+                        <outlet property="myResponseTable" destination="rRP-K7-MdW" id="aP5-1j-n1V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftg-yB-LRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -331,12 +334,13 @@
                                     <constraint firstAttribute="height" constant="67" id="UC3-b3-N9Y"/>
                                     <constraint firstAttribute="width" constant="64" id="Vdj-92-3oi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Home">
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Question Page">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MHY-BH-Vtw" kind="show" id="f5s-Qo-PdO"/>
+                                    <segue destination="fkS-wi-aVI" kind="show" id="f5T-hW-qEl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6O-38-6eO">
@@ -745,7 +749,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="bJd-ez-zNp"/>
         <segue reference="hbc-yq-XIm"/>
         <segue reference="iWv-jj-Yp2"/>
+        <segue reference="f5T-hW-qEl"/>
     </inferredMetricsTieBreakers>
 </document>
