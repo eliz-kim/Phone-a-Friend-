@@ -11,6 +11,8 @@ import CoreData
 class FeedReceiveInput: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var questions: [Question] = [] ////////QUESTION
+    var currentQuestion: String = ""
+    var response: Response?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == myQuestionTable {
@@ -57,6 +59,21 @@ class FeedReceiveInput: UIViewController, UITableViewDataSource, UITableViewDele
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? UITableViewCell
+        
+        var questionIndex: Int = 0
+        currentQuestion = (self.questions[indexPath.row].questionName)!
+    
+        for (index, question) in questions.enumerated() {
+            if(question.questionName == currentQuestion) {
+                questionIndex = index
+            }
+        }
+        
+        
+        response = questions[questionIndex].responses
+        
         performSegue(withIdentifier: "sgShowQuestionInfo", sender: nil)
     }
     
@@ -67,6 +84,14 @@ class FeedReceiveInput: UIViewController, UITableViewDataSource, UITableViewDele
         myQuestionTable.delegate = self as? UITableViewDelegate
         myQuestionTable.dataSource = self as? UITableViewDataSource
         self.myQuestionTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "sgShowQuestionInfo") {
+            let vc = segue.destination as! Specific_Question_Page
+            vc.response = response
+            vc.currentQuestion = currentQuestion
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

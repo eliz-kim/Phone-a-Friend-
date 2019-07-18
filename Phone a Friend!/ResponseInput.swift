@@ -11,30 +11,72 @@ import CoreData
 
 class ResponseInput: UIViewController {
     
+    var questions: [Question] = []
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     @IBOutlet weak var inputResponse: UITextField!
+    
+    var currentQuestion: String = ""
     
     @IBAction func saveResponse(_ sender: Any) {
         addNewResponse()
+        performSegue(withIdentifier: "sgShowResponses", sender: nil)
+    }
+    
+    func getData(){
+        do {
+            questions = try context.fetch(Question.fetchRequest())
+        } catch {
+            print("Couldn't fetch Data")
+        }
     }
     
     func addNewResponse() {
             if (inputResponse.text != "") {
                 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                 let newResponse = Response(context: context)
-                newResponse.responseName = inputResponse?.text
+                var input = (inputResponse?.text)! + "#"
+                getData()
+                
+                
+                var questionIndex = 0
+                for (index, question) in questions.enumerated() {
+                    if(question.questionName == currentQuestion) {
+                        questionIndex = index
+                    }
+                }
+                
+                var currentQuestionEntity = questions[questionIndex]
+                
+                if(currentQuestionEntity.responses?.responseName != nil) {
+                    newResponse.responseName = (currentQuestionEntity.responses?.responseName)! + input
+                } else {
+                    newResponse.responseName = input
+                }
+    
+                currentQuestionEntity.setValue(newResponse, forKey: "responses")
                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
-                print(newResponse.responseName!)
+                //(UIApplication.shared.delegate as! AppDelegate).saveContext()
                 inputResponse.text = ""
                 inputResponse.resignFirstResponder()
         }
     }
     
+    //backToResponsePage
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "sgShowResponses") {
+            let vc = segue.destination as! Specific_Question_Page
+            vc.currentQuestion = currentQuestion
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     /*
     // MARK: - Navigation
 

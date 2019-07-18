@@ -15,6 +15,7 @@ class QuestionInput: UIViewController {
     
     @IBAction func SaveQuestion(_ sender: Any) {
         addNewQuestion()
+        performSegue(withIdentifier: "sgGoHome", sender: nil)
     }
     
     func addNewQuestion() {

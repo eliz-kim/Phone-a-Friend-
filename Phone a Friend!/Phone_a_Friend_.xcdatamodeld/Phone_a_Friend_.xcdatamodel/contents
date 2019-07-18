@@ -2,12 +2,13 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
         <attribute name="questionName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="responses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Response" syncable="YES"/>
     </entity>
     <entity name="Response" representedClassName="Response" syncable="YES" codeGenerationType="class">
         <attribute name="responseName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Question" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="Response" positionX="-54" positionY="0" width="128" height="60"/>
+        <element name="Question" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Response" positionX="-63" positionY="-9" width="128" height="60"/>
     </elements>
 </model>
