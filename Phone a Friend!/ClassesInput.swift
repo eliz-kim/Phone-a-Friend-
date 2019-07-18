@@ -49,10 +49,10 @@ class ClassesInput: UIViewController {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! SubjectInput
         vc.subjectNumber = subjectNumber
         
-    }
+    }*/
     
 }

@@ -71,6 +71,12 @@ class ResponseInput: UIViewController {
         }
     }
     
+    func textFieldShouldReturn(inputResponse: UITextField) -> Bool {
+        inputResponse.resignFirstResponder()
+        self.view.endEditing(true)
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
