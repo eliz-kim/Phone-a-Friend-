@@ -43,10 +43,17 @@ class ClassesInput: UIViewController {
     
     @IBAction func subjectPressed(_ sender: Any) {
         var button = sender as! UIButton
-        
         subjectNumber = button.tag
         performSegue(withIdentifier: "sgShowSubject", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "sgShowSubject") {
+            let vc = segue.destination as! SubjectInput
+            vc.subjectNumber = subjectNumber
+        }
+    }
+    
     
     
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

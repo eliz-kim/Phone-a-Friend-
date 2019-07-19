@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftg-yB-LRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31" y="852"/>
+            <point key="canvasLocation" x="-482" y="963"/>
         </scene>
         <!--Question Feed Page-->
         <scene sceneID="haI-m1-pTF">
@@ -269,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bn-yc-cAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="134"/>
+            <point key="canvasLocation" x="420" y="232"/>
         </scene>
         <!--Respond Page-->
         <scene sceneID="86v-z5-xhE">
@@ -354,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFN-1s-IZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466" y="103"/>
+            <point key="canvasLocation" x="-1470" y="963"/>
         </scene>
         <!--Question Page-->
         <scene sceneID="yHc-cu-WGt">
@@ -454,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfx-Pb-8dQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2184.8000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1465" y="232"/>
         </scene>
         <!--Class List Page-->
         <scene sceneID="WoO-Mo-uI4">
@@ -605,7 +605,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2P-aD-hfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="852"/>
+            <point key="canvasLocation" x="420" y="963"/>
         </scene>
         <!--Math Page-->
         <scene sceneID="Rfb-kK-rNQ">
@@ -675,12 +675,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAX-na-fBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848.8" y="852.3238380809596"/>
+            <point key="canvasLocation" x="1465" y="963"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bgU-yv-uFf">
+            <objects>
+                <viewController id="kbb-p3-52R" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hd2-Lr-lux">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-CQ-be9">
+                                <rect key="frame" x="114.5" y="43" width="146" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="HlP-0L-Lwb"/>
+                                    <constraint firstAttribute="width" constant="146" id="wFn-te-YIQ"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Info">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="36" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sni-lk-uS4">
+                                <rect key="frame" x="16" y="103" width="343" height="544"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="k6x-kP-JXT"/>
+                                    <constraint firstAttribute="height" constant="544" id="lQm-3w-rXN"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Welcome to the Phone It! app!! We created this app for students  to post questions they have about a specific class for their teachers and fellow classmates. Those teachers and students can share their responses to that specific question for everyone to see! You will find a page titled "Question Feed" where you will see all the questions everyone has posted. You can press the + to add a question of your own! You can also press one of the questions to go to the page with all of the responses: from there you can add a response if you have one :)</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtn-0c-exv">
+                                <rect key="frame" x="269" y="600" width="90" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MHY-BH-Vtw" kind="show" id="TQP-6x-xG4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BtE-CQ-be9" firstAttribute="centerX" secondItem="Hd2-Lr-lux" secondAttribute="centerX" id="Emg-cJ-uBz"/>
+                            <constraint firstItem="BtE-CQ-be9" firstAttribute="centerY" secondItem="Hd2-Lr-lux" secondAttribute="centerY" constant="-261.5" id="PH5-7S-JpQ"/>
+                            <constraint firstItem="Sni-lk-uS4" firstAttribute="centerX" secondItem="Hd2-Lr-lux" secondAttribute="centerX" id="mI1-RR-xFk"/>
+                            <constraint firstItem="Sni-lk-uS4" firstAttribute="centerY" secondItem="Hd2-Lr-lux" secondAttribute="centerY" constant="41.5" id="vqO-rE-mhe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="znU-tT-3TQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IDe-op-VU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-482.39999999999998" y="231.63418290854574"/>
         </scene>
         <!--WelcomePage-->
         <scene sceneID="gGZ-Ka-Wxs">
             <objects>
-                <viewController id="Qf8-kC-98x" userLabel="WelcomePage" customClass="ViewController" customModule="Git_hub_test_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qf8-kC-98x" userLabel="WelcomePage" customClass="ViewController" customModule="Phone_a_Friend_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fuf-xl-Fb4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -726,7 +795,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MHY-BH-Vtw" kind="show" id="Z8W-rt-GVa"/>
+                                    <segue destination="kbb-p3-52R" kind="show" id="enu-fU-Rf8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -746,13 +815,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0i-A8-59p" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31" y="134"/>
+            <point key="canvasLocation" x="-1372" y="232"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="JfS-Hk-bcW"/>
         <segue reference="3tx-Hq-PoF"/>
-        <segue reference="fWn-36-aec"/>
-        <segue reference="jwG-5A-Du1"/>
+        <segue reference="bZq-7m-BjM"/>
+        <segue reference="QPQ-ZD-eOt"/>
     </inferredMetricsTieBreakers>
 </document>

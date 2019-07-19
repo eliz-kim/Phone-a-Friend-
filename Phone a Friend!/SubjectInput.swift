@@ -13,20 +13,19 @@ class SubjectInput: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var subjectImage:
-    
-    UIImageView!
+    @IBOutlet weak var subjectImage: UIImageView!
+    var subjectNumber: Int = 0
     var subjects: [String] = ["MATH", "ENGLISH", "HISTORY", "SCIENCE", "LANGUAGE"]
-    var images: [String] = ["MATH", "ENGLISH", "HISTORY", "SCIENCE", "LANGUAGE"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(subjectNumber)
         titleLabel.text = subjects[subjectNumber]
-        subjectImage.image = UIImage(named: images[subjectNumber])
+        subjectImage.image = UIImage(named: subjects[subjectNumber])
         // Do any additional setup after loading the view.
     }
     
-    var subjectNumber: Int = 0
+    
     
 
     /*
